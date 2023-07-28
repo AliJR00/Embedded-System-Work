@@ -21,7 +21,7 @@ volatile ODR* ODR_R = (volatile ODR*) GPIOA_ODR;
 
 void main()
 {
-	APB2ENR = 1<<2;
+	APB2ENR |= 1<<2;
 	GPIOA_CRH &= 0x0fffff;
 	GPIOA_CRH |= 0x200000;
 
