@@ -23,7 +23,7 @@ finalfile.elf: $(FIN) $(FINS)
 	$(CC)ld.exe -T linker_script.ld $(FIN) $(FINS) -o $@ -Map=map_file.map
 
 finalfile.hex: finalfile.elf
-	$(CC)objcopy.exe -O binary $< $@
+	$(CC)objcopy.exe -O ihex $< $@
 
 
 clean:
