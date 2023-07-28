@@ -14,14 +14,15 @@ SECTIONS
 	*(.text*)
 	*(.rodata)
 	_E_text = .;
-	}>flash
+	}> flash
 
 	.data :
 	{
 	_S_data = .;
 	*(.data)
+	. = ALIGN(4);
 	_E_data = .;
-	}>sram AT> flash
+	}> sram AT> flash
 
 	.bss :
 	{
@@ -31,7 +32,7 @@ SECTIONS
 	. = ALIGN(4);
 	. = . + 0x1000;
 	stack_top = .;
-	}>sram
+	}> sram
 	
 	
 
