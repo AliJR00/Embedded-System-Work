@@ -1,6 +1,6 @@
 
 CC=arm-none-eabi-
-CFLAGS= -gdwarf-2 -g
+CFLAGS=-mcpu=cortex-m4 -gdwarf-2 -g
 INC=-I .
 
 SRC = $(wildcard *.c)
